@@ -1,26 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ouzasdadasd</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        h1 {
-            font-size: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ouz.wtf</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="shortcut icon" type="image/png" href="img.png">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    header {
+      margin-bottom: 40px;
+    }
+    header img {
+      width: 150px;
+      height: px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1px;
+      margin-top: 30px; 
+    }
+    header h1 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+      font-size: 2.8em;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .social-links a {
+      color: #00bcd4;
+      font-size: 2em;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #018b8d;
+      transform: scale(1.1);
+    }
+    .cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #333;
+      color: #e0e0e0;
+      padding: 15px;
+      text-align: center;
+      font-size: 0.9em;
+      display: none;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.5s ease-out;
+    }
+    .cookie-consent span {
+      margin-right: 10px;
+    }
+    .cookie-consent button {
+      background: #00bcd4;
+      border: none;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 0.9em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .cookie-consent button:hover {
+      background: #018b8d;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Oblivity is forever UDC</h1>
+  <div class="container">
+    <header>
+      <img src="1658008727224.jpg" alt="Ducky">
+      <h1>ouz</h1>
+      <p>pro thugshaker, i am vengeance</p>
+    </header>
+
+    <section>
+      <div class="social-links">
+        <a href="https://github.com/ouz69" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:contact@ouz.wtf" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="#" onclick="alert('Username: thugshaker8000');" title="Discord"><i class="fab fa-discord"></i></a>
+        <a href="https://www.youtube.com/@ouz8609" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://ouz.wtf/donate" target="_blank" title="Donate"><i class="fab fa-bitcoin"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <div class="cookie-consent" id="cookieConsent">
+    <span>my only discord account is thugshaker8000</span>
+    <button onclick="acceptCookies()">Ok</button>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      document.getElementById('cookieConsent').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    }
+
+    window.onload = function() {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookieConsent').style.display = 'flex';
+      }
+    }
+  </script>
 </body>
 </html>
